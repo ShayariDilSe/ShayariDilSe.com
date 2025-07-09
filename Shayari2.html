@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ShayariDilSe - दिल से शायरी</title>
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Mukta', sans-serif;
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center fixed;
+      background-size: cover;
+      color: #222;
+      backdrop-filter: blur(4px);
+    }
+
+    header {
+      background-color: rgba(255, 80, 80, 0.8);
+      color: white;
+      text-align: center;
+      padding: 40px 10px;
+    }
+
+    nav {
+      background-color: rgba(255, 255, 255, 0.9);
+      text-align: center;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #d92b2b;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .search-box {
+      text-align: center;
+      margin: 20px;
+    }
+
+    .search-box input {
+      padding: 10px;
+      width: 70%;
+      max-width: 500px;
+      border: 2px solid #e91e63;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .shayari-section {
+      padding: 40px 20px;
+    }
+
+    .shayari-section h2 {
+      color: #e91e63;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .shayari-box {
+      background: rgba(255, 255, 255, 0.9);
+      border-left: 5px solid #f44336;
+      padding: 20px;
+      margin: 15px auto;
+      max-width: 600px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.2);
+      font-size: 18px;
+    }
+
+    .shayari-box button {
+      margin-top: 10px;
+      padding: 6px 12px;
+      background: #e91e63;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .form-section {
+      background: rgba(255,255,255,0.95);
+      margin: 40px auto;
+      padding: 20px;
+      max-width: 600px;
+      border-radius: 10px;
+    }
+
+    .form-section h3 {
+      text-align: center;
+      color: #4caf50;
+    }
+
+    .form-section input, .form-section textarea {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    .form-section button {
+      background: #4caf50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .admin-panel {
+      text-align: center;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 30px;
+      margin-top: 50px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(255,255,255,0.8);
+      color: #444;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>❤️ ShayariDilSe.com ❤️</h1>
+    <p>दिल से निकली हर बात शायरी बन जाती है...</p>
+  </header>
+
+  <nav>
+    <a href="#love">Love</a>
+    <a href="#sad">Sad</a>
+    <a href="#friendship">Friendship</a>
+    <a href="#motivational">Motivational</a>
+    <a href="#add">Add Shayari</a>
+    <a href="#admin">Admin</a>
+  </nav>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="शायरी खोजें..." onkeyup="searchShayari()" />
+  </div>
+
+  <!-- Sad Shayari Section (Updated with Your Shayari) -->
+  <section id="sad" class="shayari-section">
+    <h2>💔 Sad Shayari</h2>
+
+    <div class="shayari-box">
+      <p>बिन बताये उसने क्यूँ ये दुरी कर दी,<br>बिछड़ के उसने मोहब्बत ही अधूरी कर दी,<br>मेरे मुक़द्दर में ग़म आया तो क्या हुआ,<br>खुदा ने उसकी ख़्वाहिश तो पूरी कर दी...<br>❤️‍🩹 💯😇</p>
+      <button onclick="copyShayari(this)">कॉपी करें</button>
+    </div>
+
+    <div class="shayari-box">
+      <p>बेवफ़ाई की उसको आदत थी शायद,<br>वरना यूँ हर बात पर जुदाई न होती,<br>हमने तो निभाई थी मोहब्बत आख़िरी साँस तक,<br>काश उसे भी थोड़ी वफ़ा निभानी आती...<br>💔😔🌙</p>
+      <button onclick="copyShayari(this)">कॉपी करें</button>
+    </div>
+
+    <div class="shayari-box">
+      <p>वो चला गया खामोशी से कुछ कहे बिना,<br>हम रह गए तन्हाई में उसे सहे बिना,<br>ख़ता बस इतनी थी हमारी,<br>कि उसे चाहा बेहिसाब, पर कहे बिना...<br>💔😔🖤</p>
+      <button onclick="copyShayari(this)">कॉपी करें</button>
+    </div>
+
+    <div class="shayari-box">
+      <p>हर लफ़्ज़ में उसका नाम आता है,<br>हर ख्वाब में उसका ही पैगाम आता है,<br>कैसे कह दूँ अब भूल गया हूँ उसे,<br>जब हर साँस से पहले उसका नाम आता है...<br>💞🌙🥀</p>
+      <button onclick="copyShayari(this)">कॉपी करें</button>
+    </div>
+
+    <div class="shayari-box">
+      <p>वक़्त के साथ बदल जाते हैं लोग भी,<br>कल जो अपना था, आज अजनबी हो गया,<br>हमने तो हर लम्हा दिया उसके नाम,<br>और वो किसी और का हो गया...<br>🥺💔🔥</p>
+      <button onclick="copyShayari(this)">कॉपी करें</button>
+    </div>
+
+    <div class="shayari-box">
+      <p>ना शिकवा रहा, ना कोई गिला रहा,<br>वो अपने फ़ैसले में ही वफ़ा रहा,<br>हमने चाहा था जिसे टूटकर,<br>वो ही हमें तोड़ता चला गया...<br>😞🖤💔</p>
+      <button onclick="copyShayari(this)">कॉपी करें</button>
+    </div>
+
+    <div class="shayari-box">
+      <p>काश वो लौट आए एक बार ये कहने,<br>"गलती हो गई थी तुमसे दूर जाकर",<br>हम तो आज भी वही हैं, उसी मोड़ पर,<br>दिल थामे हुए... बस उसी का इंतज़ार करते हुए...<br>💘😢⏳</p>
+      <button onclick="copyShayari(this)">कॉपी करें</button>
+    </div>
+  </section>
+
+  <!-- Add New Shayari Section -->
+  <section id="add" class="form-section">
+    <h3>📝 नई शायरी जोड़ें</h3>
+    <form onsubmit="event.preventDefault(); alert('शायरी सेव हो गई (Demo)।');">
+      <input type="text" placeholder="शीर्षक (Optional)" />
+      <textarea rows="4" placeholder="अपनी शायरी यहाँ लिखें..." required></textarea>
+      <button type="submit">सबमिट करें</button>
+    </form>
+  </section>
+
+  <!-- Admin Section -->
+  <section id="admin" class="admin-panel">
+    <h3>🔐 Admin Login</h3>
+    <p><strong>नाम:</strong> Laxman Prajapati</p>
+    <p><strong>संपर्क:</strong> 9005492843</p>
+    <p><strong>शहर:</strong> Maharajganj</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ShayariDilSe.com | Designed by Laxman Prajapati</p>
+  </footer>
+
+  <script>
+    function copyShayari(btn) {
+      const text = btn.previousElementSibling.innerText;
+      navigator.clipboard.writeText(text);
+      btn.innerText = "कॉपी हो गया ✅";
+      setTimeout(() => btn.innerText = "कॉपी करें", 2000);
+    }
+
+    function searchShayari() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const boxes = document.querySelectorAll(".shayari-box");
+      boxes.forEach(box => {
+        const text = box.innerText.toLowerCase();
+        box.style.display = text.includes(input) ? "block" : "none";
+      });
+    }
+  </script>
+</body>
+</html>
